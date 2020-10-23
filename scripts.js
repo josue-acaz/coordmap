@@ -20,13 +20,13 @@ const locations = [
     lng: -56.19,
     dsei: "Macapá"
   },
-  {
+  /*{
     id: 4,
     label: "Marari",
     lat: 1.20,
     lng: -64.15,
     dsei: "Macapá"
-  },
+  },*/
   {
     id: 5,
     label: "Cuxaré",
