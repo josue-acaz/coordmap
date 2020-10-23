@@ -184,16 +184,27 @@ function drop() {
 
 function addMarkerWithTimeout(map, location, timeout, index) {
 
+  const image = {
+    url: 'assets/smb.png',
+    // This marker is 20 pixels wide by 32 pixels high.
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(20.5, 68)
+  };
+
   window.setTimeout(function() {
     markers.push(new google.maps.Marker({
       position: { lat: location.lat, lng: location.lng },
       map: map,
       draggable: false,
       animation: google.maps.Animation.DROP,
+      icon: image,
       label: {
         text: location.label,
-        fontSize: '18px',
-        color: '#ffffff'
+        fontSize: '10px',
+        color: '#f4f4f4',
+        fontWeight: 'bold'
       }
     }));
 
