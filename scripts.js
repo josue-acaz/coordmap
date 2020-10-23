@@ -159,6 +159,12 @@ const locations = [
     lat: -5.75,
     lng: -56.39,
     dsei: "Pista do Limão"
+  },
+  {
+    id: 24,
+    label: "Pista 13 de Maio",
+    lat: 0.34,
+    lng: -53.81
   }
 ];
 
@@ -202,8 +208,8 @@ function addMarkerWithTimeout(map, location, timeout, index) {
       icon: image,
       label: {
         text: location.label,
-        fontSize: '10px',
-        color: '#f4f4f4',
+        fontSize: (location.id === 23 || location.id === 24) ? "12px" : "10px",
+        color: (location.id === 23 || location.id === 24) ? "#ff4d4d" : "#f4f4f4",
         fontWeight: 'bold'
       }
     }));
